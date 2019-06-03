@@ -1,9 +1,15 @@
 {
   "name": "let-them-eat-gherkin",
-  "version": "0.0.2",
   "description": "伟张 Wei Zang's Gherkin Talk Repo",
+  "version": "0.0.2",
+  "license": "OSL-3.0",
+  "author": {
+    "name": "伟张",
+    "email": "contact@wei-zang.com"
+  },
   "main": "./src/index.js",
-  "repository": "https://github.com/listingslab-software/let-them-eat-gherkin.git",
-  "author": "weizang-75 <contact@wei-zang.com>",
-  "license": "MIT"
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/listingslab-software/let-them-eat-gherkin.git"
+  }
 }
