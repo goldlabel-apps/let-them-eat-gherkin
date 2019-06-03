@@ -1,0 +1,9 @@
+{
+  "name": "let-them-eat-gherkin",
+  "version": "0.0.1",
+  "description": "伟张 Wei Zang's Gherkin Talk Repo",
+  "main": "./src/index.js",
+  "repository": "https://github.com/listingslab-software/let-them-eat-gherkin.git",
+  "author": "weizang-75 <contact@wei-zang.com>",
+  "license": "MIT"
+}
