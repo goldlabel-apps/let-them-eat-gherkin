@@ -1,6 +1,6 @@
 {
   "name": "let-them-eat-gherkin",
-  "description": "伟张 Wei Zang's Gherkin Talk Repo",
+  "description": "臧偉的小黃瓜談話",
   "version": "0.0.2",
   "license": "OSL-3.0",
   "author": {
@@ -11,5 +11,29 @@
   "repository": {
     "type": "github",
     "url": "https://github.com/listingslab-software/let-them-eat-gherkin.git"
-  }
+  },
+  "scripts": {
+    "build": "react-scripts build",
+    "start": "react-scripts start"
+  },
+  "dependencies": {
+    "@material-ui/core": "^3.9.2",
+    "@material-ui/icons": "^3.0.2",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-scripts": "^2.1.1"
+  },
+  "engines": {
+    "node": ">=8",
+    "npm": ">=6"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

@@ -1,5 +1,5 @@
 
-# Wei Zang's Gherkin Talk Repo
+# 臧偉的小黃瓜談話
 
 ![Wei Zang](./docs/img/wei-zang_zorro.jpg)
 
