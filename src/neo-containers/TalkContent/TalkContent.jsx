@@ -1,5 +1,3 @@
-
-
 /* Thanks to Brian Vaughn for this great component 
     https://github.com/bvaughn/react-presents
 */
@@ -7,9 +5,13 @@
 import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import {styles} from './TalkContent.Style';
-// import { Presentation, ContentSlide } from 'react-presents';
-
 import cn from 'classnames';
+import {
+  Presentation, 
+  // Step,
+  Slide,
+} from 'react-presents';
+import SlideNew from './SlideNew';
 
 class TalkContent extends Component {
 
@@ -18,8 +20,17 @@ class TalkContent extends Component {
       classes,
     } = this.props;
     return (
-      <div className={cn(classes.presentation)}>
-        
+      <div className={cn(classes.slide)}>
+        <Presentation>
+
+        <Slide
+          component={SlideNew}
+          key={0}
+        />
+
+        </Presentation>
+
+
       </div>
     );
   }
