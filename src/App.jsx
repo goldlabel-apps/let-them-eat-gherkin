@@ -7,7 +7,7 @@ import {
   CssBaseline,
 } from '@material-ui/core/';
 import {
-  Slides,
+  TalkContent,
 } from './neo-containers';
 
 export const styles = theme => ({
@@ -21,7 +21,7 @@ class App extends Component {
       <MuiThemeProvider theme={createMuiTheme(muiTheme)}>
         <React.Fragment>
           <CssBaseline />
-          <Slides />
+          <TalkContent />
         </React.Fragment>
       </MuiThemeProvider>
     );

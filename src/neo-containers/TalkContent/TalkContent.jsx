@@ -1,0 +1,35 @@
+
+
+/* Thanks to Brian Vaughn for this great component 
+    https://github.com/bvaughn/react-presents
+*/
+
+
+
+import React, { Component } from 'react';
+import { withStyles } from '@material-ui/core/styles';
+import {styles} from './TalkContent.Style';
+import { Presentation, ContentSlide } from 'react-presents';
+
+import cn from 'classnames';
+
+class TalkContent extends Component {
+
+  render() {
+    const {
+      classes,
+    } = this.props;
+    return (
+      <div className={cn(classes.presentation)}>
+        <Presentation>
+          <ContentSlide>
+            <h1>{`slide.title`}</h1>
+            Your content goes here
+          </ContentSlide>
+        </Presentation>
+      </div>
+    );
+  }
+}
+
+export default withStyles(styles, { withTheme: true })(TalkContent)
