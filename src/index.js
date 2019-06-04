@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Tennis from './Tennis/Tennis';
+import App from './App';
 
 ReactDOM.render(
     <React.Fragment>
-        <Tennis />
+        <App />
     </React.Fragment>
 , document.getElementById('root'));
