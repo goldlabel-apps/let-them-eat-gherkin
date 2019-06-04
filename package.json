@@ -1,7 +1,7 @@
 {
   "name": "let-them-eat-gherkin",
   "description": "臧偉的小黃瓜談話",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "license": "OSL-3.0",
   "author": {
     "name": "伟张",
@@ -13,7 +13,7 @@
     "url": "https://github.com/listingslab-software/let-them-eat-gherkin.git"
   },
   "scripts": {
-    "deploy": "clear && cd ./firebase && firebase deploy",
+    "deploy": "clear && yarn build && gulp deploy && cd ./firebase && firebase deploy",
     "build": "react-scripts build",
     "start": "react-scripts start"
   },
@@ -23,6 +23,11 @@
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-scripts": "^2.1.1"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-color": "^0.0.2",
+    "gulp-rename": "^1.4.0"
   },
   "engines": {
     "node": ">=8",
