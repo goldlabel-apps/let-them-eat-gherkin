@@ -1,8 +1,8 @@
 /* http://mcg.mbitson.com */
 
 export const secondary = {
-    // hot pink
-    main: '#ff33cc',
+    // light green
+    main: '#b5c757',
 }
 
 export default secondary;
