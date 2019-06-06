@@ -15,7 +15,12 @@
   "scripts": {
     "deploy": "clear && yarn build && gulp deploy && cd ./firebase && firebase deploy",
     "build": "react-scripts build",
-    "start": "react-scripts start"
+    "start": "react-scripts start",
+    "e2e": "clear && BROWSER=none NODE_ENV=test start-server-and-test e2e:_webdriver:start http-get://localhost:4444/status e2e:_run",
+    "e2e:_ci": "BROWSER=none NODE_ENV=test start-server-and-test start http-get://localhost:3000 e2e:_webdriver",
+    "e2e:_run": "cucumber-js --require='e2e/setupTests.js' --require='e2e/createWorld.js' --require='e2e/Features/**/*.step.js' --format='node_modules/cucumber-pretty' -- 'e2e/Features/**/*.feature'",
+    "e2e:_webdriver:start": "node e2e/startWebDriver.js",
+    "e2e:start": "run-s start e2e:_webdriver"
   },
   "dependencies": {
     "@material-ui/core": "^3.9.2",
