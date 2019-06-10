@@ -1,7 +1,7 @@
 {
   "name": "let-them-eat-gherkin",
-  "description": "One way to use e2e",
-  "version": "0.0.6",
+  "description": "Let them eat Gherkin",
+  "version": "0.0.7",
   "license": "OSL-3.0",
   "author": {
     "name": "listingslab",
