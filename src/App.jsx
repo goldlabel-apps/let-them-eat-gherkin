@@ -7,7 +7,6 @@ import {
   CssBaseline,
 } from '@material-ui/core/';
 import {
-  // TalkContent,
   Tennis,
 } from './neo-containers';
 
