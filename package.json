@@ -1,11 +1,11 @@
 {
   "name": "let-them-eat-gherkin",
-  "description": "臧偉的小黃瓜談話",
-  "version": "0.0.5",
+  "description": "One way to use e2e",
+  "version": "0.0.6",
   "license": "OSL-3.0",
   "author": {
-    "name": "伟张",
-    "email": "contact@wei-zang.com"
+    "name": "listingslab",
+    "email": "listingslab@gmail.com"
   },
   "main": "./src/index.js",
   "repository": {
