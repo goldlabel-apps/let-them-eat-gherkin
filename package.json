@@ -1,11 +1,11 @@
 {
   "name": "let-them-eat-gherkin",
-  "description": "臧偉的小黃瓜談話",
-  "version": "0.0.5",
+  "description": "One way to use e2e",
+  "version": "0.0.6",
   "license": "OSL-3.0",
   "author": {
-    "name": "伟张",
-    "email": "contact@wei-zang.com"
+    "name": "listingslab",
+    "email": "listingslab@gmail.com"
   },
   "main": "./src/index.js",
   "repository": {
@@ -15,7 +15,12 @@
   "scripts": {
     "deploy": "clear && yarn build && gulp deploy && cd ./firebase && firebase deploy",
     "build": "react-scripts build",
-    "start": "react-scripts start"
+    "start": "react-scripts start",
+    "e2e": "clear && BROWSER=none NODE_ENV=test start-server-and-test e2e:_webdriver:start http-get://localhost:4444/status e2e:_run",
+    "e2e:_ci": "BROWSER=none NODE_ENV=test start-server-and-test start http-get://localhost:3000 e2e:_webdriver",
+    "e2e:_run": "cucumber-js --require='e2e/setupTests.js' --require='e2e/createWorld.js' --require='e2e/Features/**/*.step.js' --format='node_modules/cucumber-pretty' -- 'e2e/Features/**/*.feature'",
+    "e2e:_webdriver:start": "node e2e/startWebDriver.js",
+    "e2e:start": "run-s start e2e:_webdriver"
   },
   "dependencies": {
     "@material-ui/core": "^3.9.2",
@@ -26,9 +31,19 @@
     "react-scripts": "^2.1.1"
   },
   "devDependencies": {
+    "@types/nightwatch": "^0.9.8",
+    "@types/react": "^16.7.6",
+    "@types/react-dom": "^16.0.9",
+    "chromedriver": "2.43.1",
+    "cucumber": "5.0.2",
+    "cucumber-pretty": "^1.5.0",
     "gulp": "^4.0.2",
     "gulp-color": "^0.0.2",
-    "gulp-rename": "^1.4.0"
+    "gulp-rename": "^1.4.0",
+    "nightwatch": "1.0.11",
+    "nightwatch-api": "latest",
+    "selenium-server": "^3.141.0",
+    "start-server-and-test": "1.7.9"
   },
   "engines": {
     "node": ">=8",

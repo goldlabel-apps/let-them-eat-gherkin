@@ -1,7 +1,8 @@
 
-# 臧偉的小黃瓜談話
+# Let them eat Gherkin
 
-![Wei Zang](./docs/img/wei-zang_zorro.jpg)
+Will you win friends and influence people with Gherkin? Why not? 
+All the cool kids are doing it.
 
 A business stakeholder comes over and asks you to develop something.  
 "No worries," says you...  
@@ -9,4 +10,5 @@ A business stakeholder comes over and asks you to develop something.
 
 And that's where the problems start.  
 
-> [Docs](https://listingslab-software.github.io/let-them-eat-gherkin/)
+## 臧偉的小黃瓜談話
+
