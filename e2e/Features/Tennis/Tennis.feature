@@ -6,7 +6,7 @@ Feature: Tennis
 
   Scenario: Starting a new match
     Given I am on the tennis page
-    Then I should see "START MATCH"
+    Then I should see "NEW GAME"
     And I wait "1" seconds
     And I click "#start-match"
     Then The score should be "0:0"

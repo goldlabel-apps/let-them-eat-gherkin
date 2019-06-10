@@ -139,7 +139,7 @@ class Tennis extends Component {
       }
     }
     return (
-          <Grid container className={cn(classes.tennis)}>
+        <Grid container className={cn(classes.tennis)}>
           { currentMatch === null ? 
             <Grid item xs={12}  className={cn(classes.startMatchBtn)}>
               <Button
@@ -150,14 +150,13 @@ class Tennis extends Component {
                   e.preventDefault();
                   this.startMatch();
                 }}>
-                Start Match
+                New Game
               </Button>
             </Grid>
           : 
           <React.Fragment>  
             <Grid item xs={12}>
-              <Grid container className={cn(classes.court)}>
-                  
+              <Grid container className={cn(classes.court)}>          
                   <Grid item xs={6}> 
                     <Typography variant={`title`} className={cn(classes.playerTitle)}>
                       {`Player 1`}
@@ -174,7 +173,6 @@ class Tennis extends Component {
                       </IconButton>
                     </div>
                   </Grid>
-
                   <Grid item xs={6}>
                     <Typography variant={`title`} className={cn(classes.playerTitle)}>
                       {`Player 2`}
@@ -191,10 +189,8 @@ class Tennis extends Component {
                       </IconButton>
                     </div>
                   </Grid>
-
                 </Grid>
               </Grid>
-
               <Grid item xs={12} className={cn(classes.points)}>
                 <div id={`score`}>
                   <Typography variant={`title`}>
@@ -202,7 +198,6 @@ class Tennis extends Component {
                   </Typography>
                 </div>
               </Grid>
-
             </React.Fragment>
           }
         </Grid>
