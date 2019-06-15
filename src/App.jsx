@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import cn from 'classnames';
 import muiTheme from './theme/mui';
 import commonStyles from "./theme/commonStyles";
 import {
@@ -17,12 +18,17 @@ export const styles = theme => ({
 class App extends Component {
 
   render() {
+    
+    const {
+      classes,
+    } = this.props;
+
     return (
       <MuiThemeProvider theme={createMuiTheme(muiTheme)}>
-        <React.Fragment>
+        <div className={cn(classes.app)}>
           <CssBaseline />
           <Tennis />
-        </React.Fragment>
+        </div>
       </MuiThemeProvider>
     );
   }
