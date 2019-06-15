@@ -1,11 +1,7 @@
 
-/* http://mcg.mbitson.com */
-
 export const primary = {
-    // dark dreen
-    main: '#727b24',
+    // gherkin green
+    main: '#00a818',
 };
 
 export default primary;
-
-

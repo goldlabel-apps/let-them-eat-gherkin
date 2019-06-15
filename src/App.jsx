@@ -12,7 +12,7 @@ import {
   Card,
   CardContent,
   CardHeader,
-  CardMedia,
+  // CardMedia,
   IconButton,
   Typography,
   Tabs,

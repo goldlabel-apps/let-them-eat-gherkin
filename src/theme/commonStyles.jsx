@@ -1,5 +1,5 @@
 
-// const lightBgColor = `#e9ebee`;
+// const greenColor = `#00a818`;
 const appWidth = 600;
 
 export default theme => ({
