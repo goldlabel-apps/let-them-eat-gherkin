@@ -1,7 +1,7 @@
 {
   "name": "let-them-eat-gherkin",
   "description": "Let them eat Gherkin",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "license": "OSL-3.0",
   "author": {
     "name": "listingslab",
@@ -23,8 +23,9 @@
     "e2e:start": "run-s start e2e:_webdriver"
   },
   "dependencies": {
-    "@material-ui/core": "^3.9.2",
-    "@material-ui/icons": "^3.0.2",
+    "@material-ui/core": "^4.1.1",
+    "@material-ui/icons": "^4.2.0",
+    "@material-ui/lab": "^4.0.0-alpha.16",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-presents": "^0.8.1",
