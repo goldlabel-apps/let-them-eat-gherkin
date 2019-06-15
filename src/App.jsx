@@ -17,7 +17,7 @@ import {
 // import {
 //   Tennis,
 // } from './neo-containers';
-import IconPhone from '@material-ui/icons/Phone';
+// import IconGithub from './theme/svg/github.svg';
 // import FavoriteIcon from '@material-ui/icons/Favorite';
 // import PersonPinIcon from '@material-ui/icons/PersonPin';
 
@@ -54,9 +54,20 @@ class App extends Component {
                 />
               }
               action={
+
                 <IconButton 
-                  aria-label="Phone">
-                  <IconPhone />
+                  aria-label="Github"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    window.open('https://github.com/listingslab-software/let-them-eat-gherkin', '_blank')
+                    console.log ('github click') 
+                  }}  
+                >
+                  <Avatar 
+                    aria-label="Github" 
+                    className={cn(classes.github)}
+                    src={`/png/github.png`}
+                  />
                 </IconButton>
               }
             />

@@ -1,5 +1,5 @@
 
-const lightBgColor = `#e9ebee`;
+// const lightBgColor = `#e9ebee`;
 
 export default theme => ({
   app:{
@@ -15,10 +15,14 @@ export default theme => ({
     padding: theme.spacing(),
   },
   avatar:{
-    background: lightBgColor,
+    // background: lightBgColor,
   },
   media:{
     height: 0,
     paddingTop: '46.875%'
   },
+  iconButtonSize:{
+    width: 50,
+    height: 50,
+  }
 });
