@@ -9,6 +9,7 @@ dev
 /build
 /firebase/build
 firebase/functions/build
+firebase/build/index.html
 
 # misc
 .DS_Store
