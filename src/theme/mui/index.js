@@ -5,7 +5,7 @@ import mixins from './_mixins';
 import breakpoints from './_breakpoints';
 import shadows from './_shadows';
 import transitions from './_transitions';
-import spacing from './_spacing';
+// import spacing from './_spacing';
 import zIndex from './_zIndex';
 
 const theme = {
@@ -16,7 +16,7 @@ const theme = {
   breakpoints,
   shadows,
   transitions,
-  spacing,
+  // spacing,
   zIndex,
 }
 
