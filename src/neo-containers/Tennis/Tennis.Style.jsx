@@ -8,18 +8,18 @@ export const styles = () => ({
     playerTitle:{
         marginBottom: 16,
     },
-    court:{
-        marginTop: '25vh',
-    },
-    result:{
-        marginTop: '30vh',
-    },
+    // court:{
+    //     marginTop: '25vh',
+    // },
+    // result:{
+    //     marginTop: '30vh',
+    // },
     winner:{
         margin: 32,
     },
-    startMatchBtn:{
-        marginTop: '45vh',
-    },
+    // startMatchBtn:{
+    //     marginTop: '45vh',
+    // },
     points:{
         margin: 16,
     },
