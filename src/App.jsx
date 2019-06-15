@@ -77,7 +77,7 @@ class App extends Component {
                   aria-label="Github Button"
                   onClick={(e) => {
                     e.preventDefault();
-                    window.open('https://github.com/listingslab-software/let-them-eat-gherkin', '_blank')
+                    window.open('https://github.com/listingslab-software/let-them-eat-gherkin/issues/new/choose', '_blank')
                   }}>
                   <Avatar 
                     aria-label="Github Logo" 
