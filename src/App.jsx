@@ -81,7 +81,7 @@ class App extends Component {
                   }}>
                   <Avatar 
                     aria-label="Github Logo" 
-                    className={cn(classes.github)}
+                    className={cn(classes.githubLink)}
                     src={`/png/github.png`}
                   />
                 </IconButton>
