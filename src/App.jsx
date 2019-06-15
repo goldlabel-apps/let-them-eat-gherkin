@@ -4,22 +4,26 @@ import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import cn from 'classnames';
 import muiTheme from './theme/mui';
 import commonStyles from "./theme/commonStyles";
+import moment from 'moment';
 import {
   CssBaseline,
+  AppBar,
   Avatar,
   Card,
+  CardContent,
   CardHeader,
-  CardMedia,
+  // CardMedia,
   IconButton,
-  // Tabs,
-  // Tab,
+  Typography,
+  Tabs,
+  Tab,
 } from '@material-ui/core/';
-// import {
-//   Tennis,
-// } from './neo-containers';
-// import IconGithub from './theme/svg/github.svg';
-// import FavoriteIcon from '@material-ui/icons/Favorite';
-// import PersonPinIcon from '@material-ui/icons/PersonPin';
+import {
+  VerticalLinearStepper,
+  Tennis,
+} from './neo-containers';
+import IconGame from '@material-ui/icons/Phone';
+import IconGherkin from '@material-ui/icons/Favorite';
 
 export const styles = theme => ({
   ...commonStyles(theme),
@@ -27,72 +31,110 @@ export const styles = theme => ({
 
 class App extends Component {
 
+  state = {
+    tabValue: 0,
+  }
+
   render() {
     
     const {
       classes,
     } = this.props;
+    const {
+      tabValue,
+    } = this.state;
 
-    const title = `Let them eat Gherkin`;
-    const subtitle = `Win friends and influense people?`;
-    const media = `/jpg/let-them-eat-gherkin.jpg`;
-    const avatar = `/png/icon.png`;
+    let contentObj = {
+      appTitle: `Let them eat Gherkin`,
+      avatar: `/png/icon.png`,
+    };
+
+    if (tabValue === 0){
+      contentObj.media= `/jpg/let-them-eat-gherkin.jpg`;
+    } else {
+      contentObj.pageTitle = `Tennis Game`;
+      contentObj.pageBody = `Play the game`;
+      contentObj.media= `/jpg/tennis.jpg`;
+    }
 
     return (
       <MuiThemeProvider theme={createMuiTheme(muiTheme)}>
         <CssBaseline />
         <div className={cn(classes.app)}>
-           <Card className={cn(classes.card)}>
+           <Card className={cn(classes.card, classes.flexGrow)}>
             <CardHeader
-              title={title}
-              subheader={subtitle}
+              title={contentObj.appTitle}
+              subheader={moment(Date.now()).format("ddd, MMMM Do, h:mm a")}
               avatar={
                 <Avatar 
                   aria-label="Avatar" 
                   className={cn(classes.avatar)}
-                  src={avatar}
+                  src={contentObj.avatar}
                 />
               }
               action={
-
                 <IconButton 
-                  aria-label="Github"
+                  aria-label="Github Button"
                   onClick={(e) => {
                     e.preventDefault();
                     window.open('https://github.com/listingslab-software/let-them-eat-gherkin', '_blank')
-                    console.log ('github click') 
-                  }}  
-                >
+                  }}>
                   <Avatar 
-                    aria-label="Github" 
+                    aria-label="Github Logo" 
                     className={cn(classes.github)}
                     src={`/png/github.png`}
                   />
                 </IconButton>
               }
             />
-              <CardMedia
+              {/* <CardMedia
                 className={cn(classes.media)}
-                image={media}
-                title={`title`}
-              />
-           </Card>
-           
-           
-            {/* <Paper square className={classes.tabs}>
-              <Tabs
-                value={0}
-                onChange={()=>{}}
-                variant="fullWidth"
-                indicatorColor="secondary"
-                textColor="secondary"
-              >
-                <Tab icon={<PhoneIcon />} label="Gherkin" />
-                <Tab icon={<PersonPinIcon />} label="Game" />
-              </Tabs>
-            </Paper>           */}
-          {/* <Tennis /> */}
+                image={contentObj.media}
+                title={contentObj.appTitle}
+              /> */}
+            <CardContent>
+              <Typography variant="h5" color="textSecondary" component="p">
+                {contentObj.pageTitle}
+              </Typography>
+
+              <Typography variant="body2" color="textSecondary" component="p">
+                {contentObj.pageBody}
+              </Typography>
+
+
+              {
+                tabValue === 0 ? 
+                  <VerticalLinearStepper />
+                :
+                  <Tennis />
+              }
+              
+            </CardContent>
+           </Card>           
         </div>
+        <div className={cn(classes.bottomAppBar)}>
+            <AppBar 
+              position={`fixed`}
+              color={`default`}
+              className={cn(classes.appBar)
+            }>
+              <Tabs
+                value={tabValue}
+                variant={`fullWidth`}
+                indicatorColor={`primary`}
+                textColor={`primary`}
+                onChange={(e, tabValue) => {
+                  e.preventDefault();
+                  this.setState({
+                    tabValue
+                  });
+                }}>
+                <Tab icon={<IconGherkin />} label={`Context`} />
+                <Tab icon={<IconGherkin />} label={`Process`} />
+                <Tab icon={<IconGame />} label={`Tennis Game`} />
+              </Tabs>
+            </AppBar>
+          </div>
       </MuiThemeProvider>
     );
   }
