@@ -12,20 +12,17 @@ import {
   CardContent,
   CardHeader,
   CardMedia,
-  Fab,
   IconButton,
   Typography,
-  Toolbar,
-  // Tabs,
-  // Tab,
+  Tabs,
+  Tab,
 } from '@material-ui/core/';
-// import {
-//   Tennis,
-// } from './neo-containers';
-import MenuIcon from '@material-ui/icons/Menu';
-import AddIcon from '@material-ui/icons/Add';
-import SearchIcon from '@material-ui/icons/Search';
-import MoreIcon from '@material-ui/icons/MoreVert';
+import {
+  VerticalLinearStepper,
+  Tennis,
+} from './neo-containers';
+import IconGame from '@material-ui/icons/Phone';
+import IconGherkin from '@material-ui/icons/Favorite';
 
 export const styles = theme => ({
   ...commonStyles(theme),
@@ -33,17 +30,35 @@ export const styles = theme => ({
 
 class App extends Component {
 
+  state = {
+    tabValue: 0,
+  }
+
   render() {
     
     const {
       classes,
     } = this.props;
+    const {
+      tabValue,
+    } = this.state;
 
-    const title = `Let them eat Gherkin`;
-    const subtitle = `Win friends and influense people?`;
-    const media = `/jpg/let-them-eat-gherkin.jpg`;
-    const avatar = `/png/icon.png`;
-    const body = `Maecenas condimentum sagittis elit at ornare. In molestie erat nec sapien semper, sit amet condimentum nunc condimentum. Etiam a commodo massa.`;
+    let contentObj = {
+      appTitle: `Let them eat Gherkin`,
+      appSubtitle: `Win friends and influense people?`,
+      
+      avatar: `/png/icon.png`,
+    };
+
+    if (tabValue === 0){
+      contentObj.pageTitle = `Gerkin`;
+      contentObj.pageBody = `How do we use it?`;
+      contentObj.media= `/jpg/let-them-eat-gherkin.jpg`;
+    } else {
+      contentObj.pageTitle = `Tennis Game`;
+      contentObj.pageBody = `Play the game`;
+      contentObj.media= `/jpg/tennis.jpg`;
+    }
 
     return (
       <MuiThemeProvider theme={createMuiTheme(muiTheme)}>
@@ -51,27 +66,24 @@ class App extends Component {
         <div className={cn(classes.app)}>
            <Card className={cn(classes.card, classes.flexGrow)}>
             <CardHeader
-              title={title}
-              subheader={subtitle}
+              title={contentObj.appTitle}
+              // subheader={contentObj.appSubtitle}
               avatar={
                 <Avatar 
                   aria-label="Avatar" 
                   className={cn(classes.avatar)}
-                  src={avatar}
+                  src={contentObj.avatar}
                 />
               }
               action={
-
                 <IconButton 
-                  aria-label="Github"
+                  aria-label="Github Button"
                   onClick={(e) => {
                     e.preventDefault();
                     window.open('https://github.com/listingslab-software/let-them-eat-gherkin', '_blank')
-                    console.log ('github click') 
-                  }}  
-                >
+                  }}>
                   <Avatar 
-                    aria-label="Github" 
+                    aria-label="Github Logo" 
                     className={cn(classes.github)}
                     src={`/png/github.png`}
                   />
@@ -80,53 +92,51 @@ class App extends Component {
             />
               <CardMedia
                 className={cn(classes.media)}
-                image={media}
-                title={title}
+                image={contentObj.media}
+                title={contentObj.appTitle}
               />
-
-
             <CardContent>
-              <Typography variant="body2" color="textSecondary" component="p">
-                {body}
+              <Typography variant="h5" color="textSecondary" component="p">
+                {contentObj.pageTitle}
               </Typography>
+
+              <Typography variant="body2" color="textSecondary" component="p">
+                {contentObj.pageBody}
+              </Typography>
+
+
+              {
+                tabValue === 0 ? 
+                  <VerticalLinearStepper />
+                :
+                  <Tennis />
+              }
+              
             </CardContent>
-
-
-           </Card>
-
-           
+           </Card>           
         </div>
-
-
         <div className={cn(classes.bottomAppBar)}>
             <AppBar 
               position={`fixed`}
-              color={`primary`}
+              color={`default`}
               className={cn(classes.appBar)
             }>
-            <Toolbar>
-              <IconButton
-                edge="start"
-                color="inherit"
-                aria-label="Open drawer"
-              >
-                <MenuIcon />
-              </IconButton>
-              <Fab color="secondary" aria-label="Add" className={classes.fabButton}>
-                <AddIcon />
-              </Fab>
-              <div className={classes.grow} />
-              <IconButton color="inherit">
-                <SearchIcon />
-              </IconButton>
-              <IconButton edge="end" color="inherit">
-                <MoreIcon />
-              </IconButton>
-            </Toolbar>
-          </AppBar>
+              <Tabs
+                value={tabValue}
+                variant={`fullWidth`}
+                indicatorColor={`primary`}
+                textColor={`primary`}
+                onChange={(e, tabValue) => {
+                  e.preventDefault();
+                  this.setState({
+                    tabValue
+                  });
+                }}>
+                <Tab icon={<IconGherkin />} label={`Gherkin`} />
+                <Tab icon={<IconGame />} label={`Tennis Game`} />
+              </Tabs>
+            </AppBar>
           </div>
-
-
       </MuiThemeProvider>
     );
   }
