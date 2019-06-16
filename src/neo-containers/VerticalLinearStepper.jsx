@@ -27,6 +27,9 @@ const useStyles = makeStyles(theme => ({
   resetContainer: {
     padding: theme.spacing(3),
   },
+  startOverButton:{
+    marginTop: theme.spacing(3),
+  }
 }));
 
 function getSteps() {
@@ -75,14 +78,16 @@ export default function VerticalLinearStepper() {
                 <div>
                   <Button
                     disabled={activeStep === 0}
+                    variant="outlined"
+                    color="primary"
                     onClick={handleBack}
                     className={cn(classes.button)}
                   >
                     Back
                   </Button>
                   <Button
-                    variant="contained"
-                    color="primary"
+                    variant="outlined"
+                    color="secondary"
                     onClick={handleNext}
                     className={cn(classes.button)}
                   >
@@ -98,12 +103,12 @@ export default function VerticalLinearStepper() {
         <Paper 
           square elevation={0} 
           className={cn(classes.resetContainer)}>
-          <Typography>Job done. Everyone is happy.</Typography>
+          <Typography variant={`h5`}>Job done. Everyone is happy.</Typography>
           <Button 
             variant={`outlined`}
-            color={`primary`}
+            color={`secondary`}
             onClick={handleReset} 
-            className={cn(classes.button)}>
+            className={cn(classes.button, classes.startOverButton)}>
             Start Over
           </Button>
         </Paper>

@@ -44,30 +44,25 @@ class App extends Component {
       tabValue,
     } = this.state;
 
-    let contentObj = {
-      appTitle: `Let them eat Gherkin`,
-      avatar: `/png/icon.png`,
-    };
-
     return (
       <MuiThemeProvider theme={createMuiTheme(muiTheme)}>
         <CssBaseline />
         <div className={cn(classes.app)}>
            <Card className={cn(classes.card, classes.flexGrow)}>
             <CardHeader
-              title={contentObj.appTitle}
+              title={`Let them eat Gherkin`}
               subheader={moment(Date.now()).format("ddd, MMMM Do, h:mm a")}
               avatar={
                 <IconButton 
                   aria-label="Restart Button"
                   onClick={(e) => {
                     e.preventDefault();
-                    window.open('https://github.com/listingslab-software/let-them-eat-gherkin/issues/new/choose', '_blank')
+                    // window.open('https://github.com/listingslab-software/let-them-eat-gherkin/issues/new/choose', '_blank')
                   }}>
                   <Avatar 
                     aria-label="Avatar" 
                     className={cn(classes.avatar)}
-                    src={contentObj.avatar}
+                    src={`/png/icon.png`}
                   />
                 </IconButton>
               }
