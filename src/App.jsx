@@ -12,9 +12,8 @@ import {
   Card,
   CardContent,
   CardHeader,
-  // CardMedia,
+  CardMedia,
   IconButton,
-  Typography,
   Tabs,
   Tab,
 } from '@material-ui/core/';
@@ -50,14 +49,6 @@ class App extends Component {
       avatar: `/png/icon.png`,
     };
 
-    if (tabValue === 0){
-      contentObj.media= `/jpg/let-them-eat-gherkin.jpg`;
-    } else {
-      contentObj.pageTitle = `Tennis Game`;
-      contentObj.pageBody = `Play the game`;
-      contentObj.media= `/jpg/tennis.jpg`;
-    }
-
     return (
       <MuiThemeProvider theme={createMuiTheme(muiTheme)}>
         <CssBaseline />
@@ -86,23 +77,18 @@ class App extends Component {
                 </IconButton>
               }
             />
-              {/* <CardMedia
-                className={cn(classes.media)}
-                image={contentObj.media}
-                title={contentObj.appTitle}
-              /> */}
             <CardContent>
-              <Typography variant="h5" color="textSecondary" component="p">
-                {contentObj.pageTitle}
-              </Typography>
-
-              <Typography variant="body2" color="textSecondary" component="p">
-                {contentObj.pageBody}
-              </Typography>
               { tabValue === 0 ? 
                   <VerticalLinearStepper />
                 :
+                <React.Fragment>
+                  <CardMedia
+                    className={cn(classes.media)}
+                    image={'/jpg/tennis.jpg'}
+                    title={'Tennis Game'}
+                  />
                   <Tennis />
+                </React.Fragment>
               }
             </CardContent>
            </Card>           

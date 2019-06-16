@@ -9,6 +9,7 @@ import {
   Typography,
 } from '@material-ui/core/';
 import IconPlayer from '@material-ui/icons/PersonAdd';
+import IconNewGame from '@material-ui/icons/NewReleases';
 
 class Tennis extends Component {
 
@@ -142,7 +143,18 @@ class Tennis extends Component {
         <Grid container className={cn(classes.tennis)}>
           { currentMatch === null ? 
             <Grid item xs={12}  className={cn(classes.startMatchBtn)}>
-              <Button
+
+
+              <IconButton
+                id={`start-match`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  this.startMatch();
+                }}>
+                <IconNewGame className={cn(classes.iconBtn)} />
+              </IconButton>
+
+              {/* <Button
                 id={`start-match`}
                 variant={`contained`}
                 color={`primary`}
@@ -151,7 +163,7 @@ class Tennis extends Component {
                   this.startMatch();
                 }}>
                 New Game
-              </Button>
+              </Button> */}
             </Grid>
           : 
           <React.Fragment>  
