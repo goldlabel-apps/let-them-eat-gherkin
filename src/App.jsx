@@ -22,8 +22,9 @@ import {
   VerticalLinearStepper,
   Tennis,
 } from './neo-containers';
-import IconGame from '@material-ui/icons/Phone';
-import IconGherkin from '@material-ui/icons/Favorite';
+import IconGame from '@material-ui/icons/PersonAdd';
+import IconGherkin from '@material-ui/icons/Fastfood';
+import IconMenu from '@material-ui/icons/Menu';
 
 export const styles = theme => ({
   ...commonStyles(theme),
@@ -66,24 +67,22 @@ class App extends Component {
               title={contentObj.appTitle}
               subheader={moment(Date.now()).format("ddd, MMMM Do, h:mm a")}
               avatar={
-                <Avatar 
-                  aria-label="Avatar" 
-                  className={cn(classes.avatar)}
-                  src={contentObj.avatar}
-                />
-              }
-              action={
                 <IconButton 
-                  aria-label="Github Button"
+                  aria-label="Restart Button"
                   onClick={(e) => {
                     e.preventDefault();
                     window.open('https://github.com/listingslab-software/let-them-eat-gherkin/issues/new/choose', '_blank')
                   }}>
                   <Avatar 
-                    aria-label="Github Logo" 
-                    className={cn(classes.githubLink)}
-                    src={`/png/github.png`}
+                    aria-label="Avatar" 
+                    className={cn(classes.avatar)}
+                    src={contentObj.avatar}
                   />
+                </IconButton>
+              }
+              action={
+                <IconButton aria-label="Settings">
+                  <IconMenu />
                 </IconButton>
               }
             />
@@ -100,36 +99,31 @@ class App extends Component {
               <Typography variant="body2" color="textSecondary" component="p">
                 {contentObj.pageBody}
               </Typography>
-
-
-              {
-                tabValue === 0 ? 
+              { tabValue === 0 ? 
                   <VerticalLinearStepper />
                 :
                   <Tennis />
               }
-              
             </CardContent>
            </Card>           
         </div>
         <div className={cn(classes.bottomAppBar)}>
             <AppBar 
               position={`fixed`}
-              color={`default`}
+              color={`primary`}
               className={cn(classes.appBar)
             }>
               <Tabs
                 value={tabValue}
                 variant={`fullWidth`}
-                indicatorColor={`primary`}
-                textColor={`primary`}
+                indicatorColor={`secondary`}
+                textColor={`inherit`}
                 onChange={(e, tabValue) => {
                   e.preventDefault();
                   this.setState({
                     tabValue
                   });
                 }}>
-                <Tab icon={<IconGherkin />} label={`Context`} />
                 <Tab icon={<IconGherkin />} label={`Process`} />
                 <Tab icon={<IconGame />} label={`Tennis Game`} />
               </Tabs>
@@ -141,5 +135,3 @@ class App extends Component {
 }
 
 export default withStyles(styles, { withTheme: true })(App);
-
-
