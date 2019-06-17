@@ -1,7 +1,7 @@
 
 ## Let them eat Gherkin
 
-[![Let them eat Gherkin App](./img/let-them-eat-gherkin.jpg)](https://listingslab-software.github.io/let-them-eat-gherkin/)
+[![Let them eat Gherkin App](./docs/img/let-them-eat-gherkin.jpg)](https://listingslab-software.github.io/let-them-eat-gherkin/)
 
 ### Install
 
