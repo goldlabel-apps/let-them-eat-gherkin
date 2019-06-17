@@ -13,7 +13,7 @@ political heirachies to highly technical CTOs.
 
 ### Meet Bob.
 
-Let's look at a pretend real life example. This actually came from a technical test I 
+Let's look at a pretend real life example. This actually came from a [technical test](./tech_test.md) I 
 did recently when applying for a new role. _You guys know those technical tests, right?_.
 
 So Bob has been tasked to create an App which can be used to score a Tennis tournament your 
