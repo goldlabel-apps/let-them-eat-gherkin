@@ -1,7 +1,5 @@
 
-## [Home](./index.md)
-
-# [The Challenge](https://github.com/DiUS/coding-tests/blob/master/dius_tennis.md)
+# Tessis Challenge
 
 Your company is hosting a tennis tournament. To aid with this, we're developing a scoring system.
 
