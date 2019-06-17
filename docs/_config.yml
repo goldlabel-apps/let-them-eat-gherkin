@@ -1,5 +1,5 @@
 theme: jekyll-theme-minimal
 title: [Let them eat Gherkin]
 description: [A different perspective on e2e Testing]
-logo: [https://listingslab-software.github.io/let-them-eat-gherkin/img/let-them-eat-gherkin.jpg]
+logo: [/let-them-eat-gherkin/img/let-them-eat-gherkin.jpg]
 # show_downloads: ["true"]
