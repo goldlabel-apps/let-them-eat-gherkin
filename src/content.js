@@ -2,27 +2,15 @@
 const content = {
     steps: [
         {
-            slug: `/step/1`,
-            title: `Hello`,
-            stepHTML: ``,
+            title: `Meet Bob.`,
+            stepHTML: `<img src="/jpg/bob.png"/>
+            Hey. Ummmmm, yeh, I'm going to need you to, like, make an app 
+            to score a Tennis Game at the company Tennis tounament this weekend.`,
         },
         {
-            slug: `/step/2`,
-            title: `Meet Bob`,
-            stepHTML: `
-            Bob is a business stakeholder. Maybe he's your boss, maybe
-            <br />
-            <img src="/jpg/bob.png"/>`,
-        },
-        {
-            slug: `/step/3`,
-            title: `Bob is a fucken dick`,
-            stepHTML: `
-            He knows shit about shanola. 
-            <br />
-            <span class="code">
-                Feature: Tennis;
-            </span>`,
+            title: `You say...`,
+            stepHTML: `Hi Bob! Great to see you. I'd <strong>love</strong> to make an app for 
+            you. What do you have in mind?`,
         }
     ]
 };

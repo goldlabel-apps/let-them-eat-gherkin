@@ -1,25 +1,20 @@
+// import theme from "../../theme/mui";
 
-export const styles = () => ({
+export const styles = (theme) => ({
     tennis:{
         margin: 'auto',
         textAlign: 'center',
-        maxWidth: 360,
+        paddingTop: theme.spacing(3),
     },
     playerTitle:{
         marginBottom: 16,
     },
-    // court:{
-    //     marginTop: '25vh',
-    // },
-    // result:{
-    //     marginTop: '30vh',
-    // },
     winner:{
         margin: 32,
     },
-    // startMatchBtn:{
-    //     marginTop: '45vh',
-    // },
+    startMatchBtn:{
+        marginTop: theme.spacing(3),
+    },
     points:{
         margin: 16,
     },
@@ -27,7 +22,7 @@ export const styles = () => ({
         margin: 16,
     },
     iconBtn:{
-        width: 100,
-        height: 100,
+        width: 125,
+        height: 125,
     },
 });

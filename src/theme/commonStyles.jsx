@@ -22,6 +22,9 @@ export default theme => ({
     boxShadow: 'none',
     borderRadius: 'none',
   },
+  githubLink:{
+    border: '1px soid red'
+  },
   card:{
     width: '100%',
     padding: theme.spacing(),

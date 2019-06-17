@@ -12,9 +12,8 @@ import {
   Card,
   CardContent,
   CardHeader,
-  // CardMedia,
+  CardMedia,
   IconButton,
-  Typography,
   Tabs,
   Tab,
 } from '@material-ui/core/';
@@ -22,8 +21,9 @@ import {
   VerticalLinearStepper,
   Tennis,
 } from './neo-containers';
-import IconGame from '@material-ui/icons/Phone';
-import IconGherkin from '@material-ui/icons/Favorite';
+import IconGame from '@material-ui/icons/PersonAdd';
+import IconGherkin from '@material-ui/icons/Fastfood';
+import IconMenu from '@material-ui/icons/Menu';
 
 export const styles = theme => ({
   ...commonStyles(theme),
@@ -44,92 +44,67 @@ class App extends Component {
       tabValue,
     } = this.state;
 
-    let contentObj = {
-      appTitle: `Let them eat Gherkin`,
-      avatar: `/png/icon.png`,
-    };
-
-    if (tabValue === 0){
-      contentObj.media= `/jpg/let-them-eat-gherkin.jpg`;
-    } else {
-      contentObj.pageTitle = `Tennis Game`;
-      contentObj.pageBody = `Play the game`;
-      contentObj.media= `/jpg/tennis.jpg`;
-    }
-
     return (
       <MuiThemeProvider theme={createMuiTheme(muiTheme)}>
         <CssBaseline />
         <div className={cn(classes.app)}>
            <Card className={cn(classes.card, classes.flexGrow)}>
             <CardHeader
-              title={contentObj.appTitle}
+              title={`Let them eat Gherkin`}
               subheader={moment(Date.now()).format("ddd, MMMM Do, h:mm a")}
               avatar={
-                <Avatar 
-                  aria-label="Avatar" 
-                  className={cn(classes.avatar)}
-                  src={contentObj.avatar}
-                />
-              }
-              action={
                 <IconButton 
-                  aria-label="Github Button"
+                  aria-label="Restart Button"
                   onClick={(e) => {
                     e.preventDefault();
-                    window.open('https://github.com/listingslab-software/let-them-eat-gherkin', '_blank')
+                    // window.open('https://github.com/listingslab-software/let-them-eat-gherkin/issues/new/choose', '_blank')
                   }}>
                   <Avatar 
-                    aria-label="Github Logo" 
-                    className={cn(classes.github)}
-                    src={`/png/github.png`}
+                    aria-label="Avatar" 
+                    className={cn(classes.avatar)}
+                    src={`/png/icon.png`}
                   />
                 </IconButton>
               }
+              action={
+                <IconButton aria-label="Settings">
+                  <IconMenu />
+                </IconButton>
+              }
             />
-              {/* <CardMedia
-                className={cn(classes.media)}
-                image={contentObj.media}
-                title={contentObj.appTitle}
-              /> */}
             <CardContent>
-              <Typography variant="h5" color="textSecondary" component="p">
-                {contentObj.pageTitle}
-              </Typography>
-
-              <Typography variant="body2" color="textSecondary" component="p">
-                {contentObj.pageBody}
-              </Typography>
-
-
-              {
-                tabValue === 0 ? 
+              { tabValue === 0 ? 
                   <VerticalLinearStepper />
                 :
+                <React.Fragment>
+                  <CardMedia
+                    className={cn(classes.media)}
+                    image={'/jpg/tennis.jpg'}
+                    title={'Tennis Game'}
+                  />
                   <Tennis />
+                </React.Fragment>
               }
-              
             </CardContent>
            </Card>           
         </div>
         <div className={cn(classes.bottomAppBar)}>
             <AppBar 
               position={`fixed`}
-              color={`default`}
+              color={`primary`}
               className={cn(classes.appBar)
             }>
               <Tabs
                 value={tabValue}
                 variant={`fullWidth`}
-                indicatorColor={`primary`}
-                textColor={`primary`}
+                indicatorColor={`secondary`}
+                textColor={`inherit`}
                 onChange={(e, tabValue) => {
                   e.preventDefault();
                   this.setState({
                     tabValue
                   });
                 }}>
-                <Tab icon={<IconGherkin />} label={`Context`} />
                 <Tab icon={<IconGherkin />} label={`Process`} />
                 <Tab icon={<IconGame />} label={`Tennis Game`} />
               </Tabs>
@@ -141,5 +116,3 @@ class App extends Component {
 }
 
 export default withStyles(styles, { withTheme: true })(App);
-
-

@@ -1,7 +1,8 @@
 
 export const primary = {
-    // gherkin green
-    main: '#00a818',
+    // gherkin green #00a818
+    // dark grey #454545
+    main: '#454545',
 };
 
 export default primary;

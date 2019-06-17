@@ -119,7 +119,7 @@ class Tennis extends Component {
               Game Over
             </Typography>
             <div  className={cn(classes.winner)}>
-              <Typography variant={`h4`}>
+              <Typography variant={`h5`}>
                 {currentMatch.winner} Wins
               </Typography>
             </div>
@@ -150,7 +150,7 @@ class Tennis extends Component {
                   e.preventDefault();
                   this.startMatch();
                 }}>
-                New Game
+                {`Start Game`}
               </Button>
             </Grid>
           : 
@@ -158,7 +158,7 @@ class Tennis extends Component {
             <Grid item xs={12}>
               <Grid container className={cn(classes.court)}>          
                   <Grid item xs={6}> 
-                    <Typography variant={`h4`} className={cn(classes.playerTitle)}>
+                    <Typography variant={`h5`} className={cn(classes.playerTitle)}>
                       {`Player 1`}
                     </Typography>
                     <div style={{ borderRight: '1px solid #eee' }}>
@@ -174,7 +174,7 @@ class Tennis extends Component {
                     </div>
                   </Grid>
                   <Grid item xs={6}>
-                    <Typography variant={`h4`} className={cn(classes.playerTitle)}>
+                    <Typography variant={`h5`} className={cn(classes.playerTitle)}>
                       {`Player 2`}
                     </Typography>
                     <div style={{ borderLeft: '1px solid #eee' }}>
@@ -193,7 +193,7 @@ class Tennis extends Component {
               </Grid>
               <Grid item xs={12} className={cn(classes.points)}>
                 <div id={`score`}>
-                  <Typography variant={`h4`}>
+                  <Typography variant={`h5`}>
                     {currentMatch.score}
                   </Typography>
                 </div>
