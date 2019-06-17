@@ -1,5 +1,6 @@
+[![Let them eat Gherkin](./img/let-them-eat-gherkin.jpg)](http://localhost:3000)
 
-## Let them eat Gherkin
+## Welcome to country
   
 App: [https://rex-let-them-eat-gherkin.web.app](https://rex-let-them-eat-gherkin.web.app)
 
@@ -23,6 +24,3 @@ Let's look at how that process could go from here. For that we'll open the
 Let them eat Gherkin React App. The source is available on Github. I encourage you to 
 raise any issues you spot, submit Pull Resquests.... get involvesd. It makes me look good 
 and it adds your Github profile, which is important in the current recruitment climate.
-
-[![Let them eat Gherkin](./img/let-them-eat-gherkin.jpg)](http://localhost:3000)
-
