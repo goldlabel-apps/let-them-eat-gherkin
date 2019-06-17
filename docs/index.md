@@ -24,5 +24,5 @@ Let them eat Gherkin React App. The source is available on Github. I encourage y
 raise any issues you spot, submit Pull Resquests.... get involvesd. It makes me look good 
 and it adds your Github profile, which is important in the current recruitment climate.
 
-[![Let them eat Gherkin](../../img/lteg/let-them-eat-gherkin.jpg)](http://localhost:3000)
+[![Let them eat Gherkin](../docs/img/let-them-eat-gherkin.jpg)](http://localhost:3000)
 
