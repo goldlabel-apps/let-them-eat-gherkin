@@ -8,7 +8,6 @@ import moment from 'moment';
 import {
   CssBaseline,
   AppBar,
-  Avatar,
   Card,
   CardContent,
   CardHeader,
@@ -23,7 +22,7 @@ import {
 } from './neo-containers';
 import IconGame from '@material-ui/icons/PersonAdd';
 import IconGherkin from '@material-ui/icons/Fastfood';
-import IconMenu from '@material-ui/icons/Menu';
+import IconMenu from '@material-ui/icons/Code';
 
 export const styles = theme => ({
   ...commonStyles(theme),
@@ -52,28 +51,19 @@ class App extends Component {
             <CardHeader
               title={`Let them eat Gherkin`}
               subheader={moment(Date.now()).format("ddd, MMMM Do, h:mm a")}
-              avatar={
+              action={
                 <IconButton 
-                  aria-label="Restart Button"
+                  aria-label="Github"
                   onClick={(e) => {
                     e.preventDefault();
-                    // window.open('https://github.com/listingslab-software/let-them-eat-gherkin/issues/new/choose', '_blank')
+                    window.open('https://github.com/listingslab-software/let-them-eat-gherkin', '_blank')
                   }}>
-                  <Avatar 
-                    aria-label="Avatar" 
-                    className={cn(classes.avatar)}
-                    src={`/png/icon.png`}
-                  />
-                </IconButton>
-              }
-              action={
-                <IconButton aria-label="Settings">
                   <IconMenu />
                 </IconButton>
               }
             />
             <CardContent>
-              { tabValue === 0 ? 
+              { tabValue === 1 ? 
                   <VerticalLinearStepper />
                 :
                 <React.Fragment>
@@ -105,8 +95,8 @@ class App extends Component {
                     tabValue
                   });
                 }}>
-                <Tab icon={<IconGherkin />} label={`Process`} />
-                <Tab icon={<IconGame />} label={`Tennis Game`} />
+                <Tab icon={<IconGame />} id={`tennis-game`} label={`Tennis Game`} />
+                <Tab icon={<IconGherkin />} id={`gherkin`} label={`Talk to Bob`} />
               </Tabs>
             </AppBar>
           </div>

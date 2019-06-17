@@ -124,14 +124,14 @@ class Tennis extends Component {
               </Typography>
             </div>
             <Button
-              id={`start-match`}
+              id={`new-game`}
               variant={`contained`}
               color={`primary`}
               onClick={(e) => {
                 e.preventDefault();
                 this.startMatch();
               }}>
-              New Match
+              New Game
             </Button>
           </Grid>
         </Grid>
@@ -143,7 +143,7 @@ class Tennis extends Component {
           { currentMatch === null ? 
             <Grid item xs={12}  className={cn(classes.startMatchBtn)}>
               <Button
-                id={`start-match`}
+                id={`start-game`}
                 variant={`contained`}
                 color={`primary`}
                 onClick={(e) => {
