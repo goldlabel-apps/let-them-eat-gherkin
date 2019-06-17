@@ -3,7 +3,7 @@
 
 [![Let them eat Gherkin App](./docs/img/let-them-eat-gherkin.jpg)](https://listingslab-software.github.io/let-them-eat-gherkin/)
 
-### [App](https://rex-let-them-eat-gherkin.web.app/) | [Docs](https://listingslab-software.github.io/let-them-eat-gherkin/)
+### [Docs](https://listingslab-software.github.io/let-them-eat-gherkin/) | [App](https://rex-let-them-eat-gherkin.web.app/)
 
 ### Install
 
