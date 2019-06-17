@@ -8,4 +8,4 @@ function copyBuild(cb) {
 }
 exports.copyBuild = copyBuild;
 
-exports.deploy = series(mvIndex, copyBuild);
+exports.deploy = series(copyBuild);
