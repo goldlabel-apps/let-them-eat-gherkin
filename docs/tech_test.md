@@ -3,7 +3,7 @@
 
 # [The Challenge](https://github.com/DiUS/coding-tests/blob/master/dius_tennis.md)
 
-DiUS is hosting a tennis tournament. To aid with this, we're developing a scoring system.
+Your company is hosting a tennis tournament. To aid with this, we're developing a scoring system.
 
 The scoring system for tennis works like this.
 
