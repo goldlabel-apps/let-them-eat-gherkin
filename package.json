@@ -2,7 +2,7 @@
   "name": "let-them-eat-gherkin",
   "description": "臧偉的小黃瓜談話",
   "version": "0.1.7",
-  "license": "OSL-3.0",
+  "license": "MIT",
   "author": {
     "name": "listingslab",
     "email": "listingslab@gmail.com"
@@ -13,9 +13,8 @@
     "url": "https://github.com/listingslab-software/let-them-eat-gherkin.git"
   },
   "scripts": {
-    "deploy": "clear && yarn build && gulp deploy && cd ./firebase && firebase deploy",
-    "build": "react-scripts build",
     "start": "react-scripts start",
+    "build": "react-scripts build",
     "e2e": "clear && BROWSER=none NODE_ENV=test start-server-and-test e2e:_webdriver:start http-get://localhost:4444/status e2e:_run",
     "e2e:_ci": "BROWSER=none NODE_ENV=test start-server-and-test start http-get://localhost:3000 e2e:_webdriver",
     "e2e:_run": "cucumber-js --require='e2e/setupTests.js' --require='e2e/createWorld.js' --require='e2e/Features/**/*.step.js' --format='node_modules/cucumber-pretty' -- 'e2e/Features/**/*.feature'",
@@ -39,9 +38,6 @@
     "chromedriver": "2.43.1",
     "cucumber": "5.0.2",
     "cucumber-pretty": "^1.5.0",
-    "gulp": "^4.0.2",
-    "gulp-color": "^0.0.2",
-    "gulp-rename": "^1.4.0",
     "nightwatch": "1.0.11",
     "nightwatch-api": "latest",
     "selenium-server": "^3.141.0",

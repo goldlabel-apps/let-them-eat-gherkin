@@ -1,8 +1,6 @@
 
 ## Let them eat Gherkin
 
-[![Let them eat Gherkin App](./let-them-eat-gherkin.jpg)](https://listingslab-software.github.io/let-them-eat-gherkin/)
-
 ### Install
 
 ```
@@ -20,3 +18,5 @@ yarn e2e
 ```
 
 Should _just work_ &trade;
+
+![Let them eat Gherkin App](./public/jpg/let-them-eat-gherkin.jpg)
